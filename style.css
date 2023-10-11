@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url(/images/bg-pattern-desktop.svg);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-container {
+  margin: 30px auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+}
+nav {
+  margin-left: 30px;
+}
+.banner-foto {
+  background-image: url(/images/hero-mobile.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+.cont {
+  margin: 20px auto;
+  text-align: center;
+}
+.cont h1 {
+  margin: 10px;
+  font-size: 50px;
+  letter-spacing: 10px;
+  color: #403839;
+}
+.cont h1 span {
+  font-weight: 10;
+}
+.cont p {
+  margin: 0 50px;
+  margin-bottom: 30px;
+  color: #d5b8ba;
+  text-align: center;
+  line-height: 40px;
+}
+input,
+button {
+  height: 3em;
+}
+input {
+  width: 80%;
+  border-radius: 2em;
+  border: 1px solid hsl(0, 36%, 70%);
+  padding: 0 10px;
+}
+button {
+  margin-left: -5em;
+  border-radius: 2em;
+  font-size: 14px;
+  background: linear-gradient(to right, hsl(0, 5%, 75%), hsl(0, 36%, 70%));
+  width: 20%;
+  color: white;
+}
+
+@media only screen and (min-width: 800px) {
+  header {
+    height: 100vh;
+  }
+  .grid-container {
+    margin: 10% auto;
+    border: 1px solid white;
+    box-shadow: 0 0 4px 4px gray;
+    width: 1000px;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "nav  banner-foto"
+      "cont  banner-foto";
+  }
+  .banner-foto {
+    background-image: url(/images/hero-desktop.jpg);
+    background-position: top;
+    height: 100%;
+  }
+  #nav {
+    grid-area: nav;
+    margin-top: 30px;
+    margin-left: 50px;
+  }
+  #banner-foto {
+    grid-area: banner-foto;
+  }
+  #cont {
+    grid-area: cont;
+  }
+  .cont {
+    margin-top: 40px;
+    margin-left: 50px;
+    text-align: start;
+  }
+  .cont h1 {
+    margin: 10px;
+    font-size: 50px;
+    letter-spacing: 20px;
+    color: #403839;
+  }
+  .cont h1 span {
+    font-weight: 10;
+    letter-spacing: 20px;
+  }
+  .cont p {
+    margin-top: 10px;
+    margin-left: 0;
+    color: #d5b8ba;
+    text-align: start;
+    line-height: 20px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  header {
+    height: 100vh;
+  }
+  .grid-container {
+    margin: 10% auto;
+    border: 1px solid white;
+    box-shadow: 0 0 4px 4px gray;
+    width: 1200px;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "nav  banner-foto"
+      "cont  banner-foto";
+  }
+}
